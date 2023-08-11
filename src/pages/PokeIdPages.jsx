@@ -22,12 +22,12 @@ const PokeIdPages = () => {
       <header className="pokeid__header">
         <img
           className="pokeid__header__image"
-          src="./public/images/headerid.svg"
+          src="/images/headerid.svg"
           alt=""
         />
         <img
           className="pokeid__header__image2"
-          src="./public/images/pokedexball.svg"
+          src="/images/pokedexball.svg"
           alt=""
         />
       </header>

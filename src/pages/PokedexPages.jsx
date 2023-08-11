@@ -45,7 +45,7 @@ const PokedexPages = () => {
     <div className="pokedexpages__container">
       <header className="pokedexpages__container__header">
         <img className="pokeid__header__image" src="/images/header.svg" alt="" />
-        <img className="pokeid__header__image2" src="./public/images/pokedexball.svg" alt="" />
+        <img className="pokeid__header__image2" src="/images/pokedexball.svg" alt="" />
       </header>
       <p className="pokedexpages__bienvenido">
         <span>Bienvenido {trainer}</span>, aquí podrás encontrar tu Pokémon
