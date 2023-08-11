@@ -11,7 +11,7 @@ const PokeIdPages = () => {
 
   const firstType = pokemon?.types[0].type.name;
 
-  console.log(pokemon);
+
 
   useEffect(() => {
     getPokemon();

@@ -8,7 +8,7 @@ const PokedexPages = () => {
   const [seletValue, setseletValue] = useState("allpokemons");
   const [inputValue, setInputValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 50;
 
   const totalPokemons = 5000;
   const maxPages = Math.ceil(totalPokemons / itemsPerPage);
@@ -31,15 +31,25 @@ const PokedexPages = () => {
     }
   }, [seletValue, currentPage]);
 
-  const inputSearch = useRef();
+  // const inputSearch = useRef();
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    setInputValue(inputSearch.current.value.trim().toLowerCase());
-    setseletValue("allpokemons");
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   setInputValue(inputSearch.current.value.trim().toLowerCase());
+  //   setseletValue("allpokemons");
+  // };
+
+  // const handleInputChange = (e) => {
+  //   setInputValue(e.target.value.trim().toLowerCase());
+  // };
+
+  // const cbFilter = (poke) => poke.name.includes(inputValue);
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
   };
-
-  const cbFilter = (poke) => poke.name.includes(inputValue);
+  
+  const cbFilter = (poke) => poke.name.includes(inputValue.toLowerCase());
 
   return (
     <div className="pokedexpages__container">
@@ -52,10 +62,16 @@ const PokedexPages = () => {
         favorito
       </p>
       <div className="pokedexpages__container__formularios">
-        <form className="pokedexpages__formulario" onSubmit={handleClick}>
-          <input
+        <form className="pokedexpages__formulario" >
+          {/* <input
             placeholder="Buscar un pokemon"
             ref={inputSearch}
+            type="text"
+          /> */}
+            <input
+            placeholder="Buscar un pokemon"
+            value={inputValue}
+            onChange={handleInputChange}
             type="text"
           />
           <button>Buscar</button>
@@ -84,7 +100,6 @@ const PokedexPages = () => {
             key={page}
             onClick={() => setCurrentPage(page)}
             className={currentPage === page ? "pokedexpages__buttons__options__active" : "pokedexpages__buttons__options"}
-            
           >
             {page}
           </button>
