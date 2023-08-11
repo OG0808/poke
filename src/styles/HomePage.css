@@ -1,0 +1,54 @@
+.homePage__pokedex {
+  margin: 0 auto;
+  padding: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  height: 1024px;
+  justify-content: space-between;
+}
+
+.homePage__welcome {
+  margin-top: -300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homePage__welcome > h2 {
+  color: #fe1936;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 61px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.homePage__welcome > p {
+  font-size: 1.5rem;
+}
+
+.homePage__form {
+  margin-top: -300px;
+}
+
+.homePage__form > input {
+  width: 500px;
+  height: 70px;
+  font-size: 1.7rem;
+  padding: 15px;
+  outline: none;
+}
+
+.homePage__form > button {
+  background: #d93f3f;
+  color: white;
+  padding: 0 20px;
+  height: 70px;
+  font-size: 1.7rem;
+  outline: none;
+}
+
+.homePage__footerVar {
+}
